@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back2"
+    tools:context=".birdActivity">
+
+
+    <ImageView
+        android:id="@+id/bird13"
+        android:layout_marginTop="29dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/bird14"
+        app:layout_constraintStart_toEndOf="@+id/bird3"
+        app:layout_constraintTop_toBottomOf="@+id/remainigTaps"
+        app:srcCompat="@drawable/bird" />
+
+    <ImageView
+        android:id="@+id/bird14"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/bird15"
+        app:layout_constraintStart_toEndOf="@+id/bird12"
+        app:srcCompat="@drawable/bird" />
+
+    <ImageView
+        android:id="@+id/bird15"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toEndOf="@+id/bird6"
+        app:layout_constraintTop_toBottomOf="@+id/bird14"
+        app:srcCompat="@drawable/bird" />
+
+    <ImageView
+        android:id="@+id/bird16"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toEndOf="@+id/bird9"
+        app:layout_constraintTop_toBottomOf="@+id/bird15"
+        app:srcCompat="@drawable/bird" />
+
+    <TextView
+        android:id="@+id/birdText"
+        android:layout_width="157dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="cursive"
+        android:text="Tap Birds!"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="111dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bird" />
+
+    <TextView
+        android:id="@+id/taps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="Remaining Taps:"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.244"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birdText"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <TextView
+        android:id="@+id/remainigTaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="cursive"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taps" />
+
+    <ImageView
+        android:id="@+id/bird1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/bird10"
+        app:layout_constraintEnd_toStartOf="@+id/bird2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/remainigTaps"
+        app:srcCompat="@drawable/bird" />
+
+    <ImageView
+        android:id="@+id/bird2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintEnd_toStartOf="@+id/bird3"
+        app:layout_constraintStart_toEndOf="@+id/bird1"
+        app:layout_constraintTop_toBottomOf="@+id/remainigTaps"
+        app:srcCompat="@drawable/bird"
+        tools:layout_editor_absoluteY="301dp" />
+
+    <ImageView
+        android:id="@+id/bird3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/bird14"
+        app:layout_constraintEnd_toStartOf="@+id/bird13"
+        app:layout_constraintStart_toEndOf="@+id/bird2"
+        app:layout_constraintTop_toBottomOf="@+id/remainigTaps"
+        app:srcCompat="@drawable/bird" />
+
+    <ImageView
+        android:id="@+id/bird4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/bird7"
+        app:layout_constraintEnd_toStartOf="@+id/bird5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bird10"
+        app:srcCompat="@drawable/bird" />
+
+    <ImageView
+        android:id="@+id/bird5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/bird8"
+        app:layout_constraintEnd_toStartOf="@+id/bird6"
+        app:layout_constraintStart_toEndOf="@+id/bird4"
+        app:layout_constraintTop_toBottomOf="@+id/bird11"
+        app:srcCompat="@drawable/bird" />
+
+    <ImageView
+        android:id="@+id/bird6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/bird16"
+        app:layout_constraintEnd_toStartOf="@+id/bird15"
+        app:layout_constraintStart_toEndOf="@+id/bird5"
+        app:layout_constraintTop_toBottomOf="@+id/bird12"
+        app:srcCompat="@drawable/bird" />
+
+    <ImageView
+        android:id="@+id/bird7"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        app:layout_constraintEnd_toStartOf="@+id/bird8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bird4"
+        app:srcCompat="@drawable/bird" />
+
+    <ImageView
+        android:id="@+id/bird8"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/bird9"
+        app:layout_constraintStart_toEndOf="@+id/bird7"
+        app:layout_constraintTop_toBottomOf="@+id/bird15"
+        app:srcCompat="@drawable/bird" />
+
+    <ImageView
+        android:id="@+id/bird9"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toEndOf="@+id/bird8"
+        app:layout_constraintTop_toBottomOf="@+id/bird6"
+        app:srcCompat="@drawable/bird" />
+
+    <ImageView
+        android:id="@+id/bird10"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/bird4"
+        app:layout_constraintEnd_toStartOf="@+id/bird11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bird1"
+        app:srcCompat="@drawable/bird" />
+
+    <ImageView
+        android:id="@+id/bird11"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/bird5"
+        app:layout_constraintEnd_toStartOf="@+id/bird12"
+        app:layout_constraintStart_toEndOf="@+id/bird10"
+        app:layout_constraintTop_toBottomOf="@+id/bird2"
+        app:srcCompat="@drawable/bird" />
+
+    <ImageView
+        android:id="@+id/bird12"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/bird6"
+        app:layout_constraintEnd_toStartOf="@+id/bird14"
+        app:layout_constraintStart_toEndOf="@+id/bird11"
+        app:layout_constraintTop_toBottomOf="@+id/bird2"
+        app:srcCompat="@drawable/bird" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
