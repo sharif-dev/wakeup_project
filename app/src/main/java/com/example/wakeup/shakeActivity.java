@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class shakeActivity extends AppCompatActivity  {
     private SensorManager sensorManager;
@@ -24,7 +25,9 @@ public class shakeActivity extends AppCompatActivity  {
     private Button back;
     private SharedPreferences prefs;
     private SharedPreferences.Editor editor;
-    int temp;
+    int threshold ;
+    int temp = 5;
+    TextView num_shake;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,8 +62,9 @@ public class shakeActivity extends AppCompatActivity  {
 
         editor = getSharedPreferences("alarmInfo", MODE_PRIVATE).edit();
         prefs = getSharedPreferences("alarmInfo", MODE_PRIVATE);
-        temp = 3 + prefs.getInt("difficulty", 3);
-
+        threshold = 1 + prefs.getInt("difficulty", 3);
+        num_shake = findViewById(R.id.num_shake_txt);
+        num_shake.setText(""+threshold);
 
         //setting gyroscope sensor
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -70,15 +74,19 @@ public class shakeActivity extends AppCompatActivity  {
             public void onSensorChanged(SensorEvent event) {
 
                 if(event.values[2] > 0.5f*temp || event.values[2] < -0.5f*temp){
-                    System.out.println("hi--------------------------> " + temp);
-                    vibrator.cancel();
-                    r.stop();
-                    editor.putBoolean("isAnyAlarmSet", false);
-                    editor.putString("alarmType","");
-                    editor.apply();
-                    Intent startIntent = new Intent(getApplicationContext(), SettingActivity.class);
-                    startIntent.putExtra("type","shake");
-                    startActivity(startIntent);
+//                    System.out.println("hi--------------------------> " + temp);
+                    threshold -= 1;
+                    num_shake.setText(""+threshold);
+                    if (threshold == 0) {
+                        vibrator.cancel();
+                        r.stop();
+                        editor.putBoolean("isAnyAlarmSet", false);
+                        editor.putString("alarmType", "");
+                        editor.apply();
+                        Intent startIntent = new Intent(getApplicationContext(), SettingActivity.class);
+                        startIntent.putExtra("type", "shake");
+                        startActivity(startIntent);
+                    }
                 }
             }
 
