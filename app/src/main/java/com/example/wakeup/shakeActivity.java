@@ -26,7 +26,7 @@ public class shakeActivity extends AppCompatActivity  {
     private SharedPreferences prefs;
     private SharedPreferences.Editor editor;
     int threshold ;
-    int temp = 5;
+    int temp = 3;
     TextView num_shake;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,17 +75,21 @@ public class shakeActivity extends AppCompatActivity  {
 
                 if(event.values[2] > 0.5f*temp || event.values[2] < -0.5f*temp){
 //                    System.out.println("hi--------------------------> " + temp);
-                    threshold -= 1;
-                    num_shake.setText(""+threshold);
-                    if (threshold == 0) {
-                        vibrator.cancel();
-                        r.stop();
-                        editor.putBoolean("isAnyAlarmSet", false);
-                        editor.putString("alarmType", "");
-                        editor.apply();
-                        Intent startIntent = new Intent(getApplicationContext(), SettingActivity.class);
-                        startIntent.putExtra("type", "shake");
-                        startActivity(startIntent);
+                    temp-=1;
+                    if (temp == 0) {
+                        temp = 3;
+                        threshold -= 1;
+                        num_shake.setText("" + threshold);
+                        if (threshold == 0) {
+                            vibrator.cancel();
+                            r.stop();
+                            editor.putBoolean("isAnyAlarmSet", false);
+                            editor.putString("alarmType", "");
+                            editor.apply();
+                            Intent startIntent = new Intent(getApplicationContext(), SettingActivity.class);
+                            startIntent.putExtra("type", "shake");
+                            startActivity(startIntent);
+                        }
                     }
                 }
             }
