@@ -29,10 +29,18 @@ public class AlertReceiver extends BroadcastReceiver {
                 break;
             }
             case "math":{
-//TODO
+                Intent intent1 = new Intent();
+                intent1.setClassName(context.getPackageName(), mathGameActivity.class.getName());
+                intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent1);
+                break;
             }
             case "shake":{
-//Todo
+                Intent intent1 = new Intent();
+                intent1.setClassName(context.getPackageName(), shakeActivity.class.getName());
+                intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent1);
+                break;
             }
             case "walk":{
                 Intent intent1 = new Intent();

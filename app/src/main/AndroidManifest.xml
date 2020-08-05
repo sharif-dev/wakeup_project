@@ -16,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TypeSettingActivity"></activity>
+        <activity android:name=".shakeActivity"></activity>
+        <activity android:name=".mathGameActivity" />
+        <activity android:name=".TypeSettingActivity" />
         <activity android:name=".TypeActivity" />
         <activity android:name=".birdActivity" />
         <activity android:name=".SettingActivity" />

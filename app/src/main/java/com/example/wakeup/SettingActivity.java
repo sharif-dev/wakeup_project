@@ -44,7 +44,7 @@ public class SettingActivity extends AppCompatActivity implements TimePickerDial
         timeItselfView = (TextView) findViewById(R.id.time);
         changBtn = (Button) findViewById(R.id.changeBtn);
         cancelBtn = (Button) findViewById(R.id.cancleBtn);
-        back = (Button) findViewById(R.id.back);
+        back = (Button) findViewById(R.id.backBTN);
         ImageView imageView = (ImageView) findViewById(R.id.image);
 
         seekBar = (SeekBar) findViewById(R.id.seekBar);
